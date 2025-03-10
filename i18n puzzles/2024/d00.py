@@ -40,7 +40,7 @@ r=[]
 s=0
 t=''
 
-with open(f'{DAY}.txt','r')as F:
+with open(f'{DAY}.txt', 'r', encoding='utf8')as F:
     for l in F:
         l=l.rstrip('\n')
         #l=[*map(int,re.findall('-?\d+',l))]
