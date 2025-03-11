@@ -30,6 +30,8 @@ import re
 import sys
 import z3
 import networkx as nx
+import locale
+import pytz
 
 COLS = {
     '.': (255, 255, 255),
