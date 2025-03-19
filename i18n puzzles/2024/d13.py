@@ -24,7 +24,6 @@ for i in range(len(a)):
                 r+=[s]
         except:
             pass
-    print(*r)
     a[i]=r[0]
 
 s=0
