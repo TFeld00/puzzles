@@ -32,6 +32,8 @@ import z3
 import networkx as nx
 import locale
 import pytz
+from unidecode import *
+from unicodedata import *
 
 COLS = {
     '.': (255, 255, 255),
