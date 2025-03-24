@@ -10,7 +10,7 @@ with open(f'{DAY}.txt', 'r', encoding='utf8')as F:
         r+=[l]
         
 def clean(s):
-    s=re.sub(r'[⁧⁦⁩]','',s)
+    s=re.sub(r'[\u2067\u2066\u2069]','',s)
     return s
 
 T=str.maketrans('()',')(')
@@ -19,8 +19,8 @@ def flipTokens(m):
     return re.sub(r'\d+',lambda a:a[0][::-1],s)
 
 def flip(s):
-    while re.search(r'[⁧⁦⁩]',s):
-        s=re.sub(r'[⁦⁧]([^⁧⁦⁩]*)⁩',flipTokens,s)
+    while re.search(r'[\u2067\u2066\u2069]',s):
+        s=re.sub(r'[\u2067\u2066]([^\u2067\u2066\u2069]*)\u2069',flipTokens,s)
     return s
 
 
