@@ -1,6 +1,7 @@
 DAY,_,_=__file__.rpartition('.')
 
 from alg.util import parse_no_headers
+from img.img import read_img, write_img, write_img_fromlist     #write_img(DAY,COLS)
 
 r=[]
 
@@ -203,6 +204,7 @@ solveBottom(M,16,[])
 solve(M,[])
 
 I=J=0
+RES=[]
 with open(f'{DAY}o.txt', 'w', encoding='utf8')as F:
     for l in M:
         s=l.decode('utf8')
@@ -211,7 +213,18 @@ with open(f'{DAY}o.txt', 'w', encoding='utf8')as F:
             J=s.index('╳')
             print(I*J)
         I+=1
+        RES+=s,
 
 with open(f'{DAY}b.txt', 'w', encoding='utf8')as F:
     for l in M:
         F.write(''.join('%02x'%c for c in l)+'\n')
+
+S=set(c for l in RES for c in l)
+COLS = {}
+m=int(255/len(S))
+for i,c in enumerate('o¨ñ^╳═≋∧∨𐲣•-I¦𐌉⁖※𐌡𐧸𐳓∞¯║╚|:╔∣±𐌘Δ╝~¤∅8−Ø𐳻𐌟ŵ#𑀍φ.v╗𐀏'):
+    i*=m
+    COLS[c]=(i,i,i)
+COLS['╳']=(255,0,0)
+
+write_img_fromlist(RES,f'{DAY}',COLS)
