@@ -14,36 +14,27 @@ with open(f'{DAY}.txt', 'r', encoding='utf8')as F:
 import base64
 b=base64.b64decode(t)
 
-s=b.decode('utf-16le')[1:]
+s=b.decode('utf16')
 
 w=20
 ba=['{:020b}'.format(ord(c)) for c in s]
-#print(ba)
-#print([len(v)for v in ba])
 ba=''.join(ba)
-#print(ba)
-#print(len(ba)/16)
 
 w=8
 r=[]
 for i in range(0,len(ba),w):
     r+=int(ba[i:i+w],2),
-#print([hex(v)for v in r])
 
 b=bytes(r)
-#print(b)
-#print(bin(0xfc))
 
 def utf8e(b):
     def con(b,i,n):
         if n>1:
-            v=''.join(['{:06b}'.format(b[i+v]%64) for v in range(1,n)][::1])
+            v=''.join(['{:06b}'.format(b[i+v]%64) for v in range(0,n)][::1])[n-1:]
         else:
             v='{:08b}'.format(b[i]%64)
 
-        l=ceil(len(v)/8)*8
-        l=28
-        return v.rjust(l,'0')[-28:],
+        return '{:028b}'.format(int(v,2))[-28:],
     i=0
     r=[]
     while i<len(b):
@@ -69,6 +60,7 @@ def utf8e(b):
         elif c<=0b11111110:
             r+=con(b,i,7)
             i+=7
+    print(r)
     r=''.join(r)
     x=[]
     for i in range(0,len(r),8):
@@ -79,6 +71,3 @@ x=utf8e(b)
 
 print(bytes(x))
 print(bytes(x).decode('utf8'))
-
-# "2\x0396486,\x00456935\x07, 0144\x0152"
-# -> "2396486,4569357, 0144152"
