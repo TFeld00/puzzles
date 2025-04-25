@@ -51,7 +51,7 @@ with open(f'{DAY}a.txt','r')as F:
         #l=list(l)
         #print(l)
         r+=[l]
-        t+=l
+        #t+=l
         
         
 #W,H=len(r[0]),len(r)
