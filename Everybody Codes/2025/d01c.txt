@@ -1,0 +1,3 @@
+Krythoryx,Eldenzor,Eltthyris,Rahlith,Gaerwyris,Vyrgalor,Feroris,Elvarnixis,Ardenfyr,Drakquor,Tharilaris,Ralsor,Aurethel,Rythryn,Sarnnarel,Torryn,Rythlyr,Quarnkris,Mornquor,Nexzion,Qyraendris,Ulkjor,Xyradar,Quarntaril,Sarnxith,Aelzar,Ildvynar,Brelxeth,Wynynn,Drazyth
+
+L20,R16,L21,R8,L20,R11,L33,R14,L6,R31,L23,R5,L11,R25,L41,R32,L11,R12,L40,R44,L5,R22,L5,R36,L5,R35,L5,R46,L5,R25,L5,R27,L5,R47,L5,R17,L5,R22,L5,R26,L36,R47,L42,R6,L15,R8,L19,R48,L23,R32,L36,R47,L9,R40,L13,R12,L36,R42,L30

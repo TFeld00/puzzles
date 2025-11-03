@@ -1,0 +1,3 @@
+Varindaros,Brynthar,Naradarin,Ardendren,Ulcyth,Sylvash,Cynvarurath,Tharilnor,Ilmarbryn,Quarnxel,Arvryn,Elaracris,Mavdax,Harrovan,Aerral,Gaervyr,Maralfarin,Rythangalor,Galluth,Cyndcion
+
+L5,R13,L18,R6,L14,R8,L10,R5,L15,R6,L5,R10,L5,R13,L5,R8,L5,R6,L5,R8,L5,R17,L8,R11,L8,R16,L17,R8,L19
