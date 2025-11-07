@@ -43,7 +43,7 @@ t=''
 with open(f'{DAY}a.txt','r')as F:
     for l in F:
         l=l.rstrip('\n')
-        #l=[*map(int,re.findall('-?\d+',l))]
+        #l=[*map(int,re.findall(r'-?\d+',l))]
         #l=[*map(int,l.split())]
         #l=[*map(int,l)]
         #l=l.split()
