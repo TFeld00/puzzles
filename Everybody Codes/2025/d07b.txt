@@ -1,0 +1,29 @@
+Azfelix,Valrax,Sylnyn,Azadar,Azsyx,Dalthar,Dalfelix,Kypyxis,Kyagrath,Selagrath,Selrax,Dalagrath,Kyfelix,Valelor,Rynthar,Eryjor,Kyrax,Rynfelix,Erythar,Azthar,Kythar,Eryfelix,Ferfelix,Ferpyxis,Shaemfelix,Sylfelix,Ferjor,Selthar,Selsyx,Shaemrax,Shaemadar,Azrax,Feragrath,Eryagrath,Rynsyx,Valnyn,Ferthar,Daljor,Rynrax,Erynyn,Kynyn,Seljor,Fernyn,Valfelix,Ferrax,Dalrax,Shaemnyn,Valjor,Shaempyxis,Rynagrath,Rynpyxis,Valadar,Eryadar,Kyelor,Dalnyn,Eryrax,Eryelor,Valpyxis,Shaemelor,Syljor,Selpyxis,Shaemthar,Valagrath,Selfelix,Azagrath,Rynjor,Shaemjor,Sylelor,Kyjor,Kyadar,Shaemagrath,Rynadar,Dalelor,Sylagrath,Valthar,Shaemsyx,Sylthar,Fersyx,Aznyn,Feradar,Sylsyx,Kysyx,Rynelor,Azjor,Sylpyxis,Azelor,Ferelor,Valsyx,Daladar,Dalpyxis,Rynnyn,Sylrax,Selelor,Selnyn,Seladar,Dalsyx,Erysyx,Erypyxis,Syladar,Azpyxis
+
+d > a
+g > r
+s > y
+r > v,a,p,j,f,r,s,t,e,n
+e > l,m,v
+R > y
+f > e
+j > o
+n > y,p,j,a,f,r,s,t,e,n
+E > r
+t > h
+D > a
+A > z
+z > v
+p > y
+h > a,v
+F > e
+a > l,d,r,x,g,t,e,v
+i > x,s
+l > f,i,o,p,j,a,r,s,t,e,n
+K > y
+o > r
+S > h,e,y
+m > p,j,a,f,r,s,t,e,n
+x > i
+V > a
+y > p,x,j,a,f,r,s,t,e,n,v

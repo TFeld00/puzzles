@@ -1,0 +1,31 @@
+Ny,Nyl,Nyth,Nyss,Nyrix,Mor,Draz,Varin,Crag,Zar,Bryth,Xar,Glynn,Van,Pald,Ael,Ark,Cal,Ryss,Bryn
+
+N > y
+o > r,v
+X > a
+x > d,a,z,f,g,o,i
+h > d,a,z,f,g,o,i
+l > d,a,z,f,g,o,i,v
+a > r,s,t,g,z,v
+G > l
+g > n,o,r,d,a,z,f,g,i
+P > a
+M > o
+z > r,d,a,z,f,g,o,i
+n > g,a,d,z,f,o,i,n
+A > e,r
+f > e
+V > a
+y > n,v,t
+Z > a
+D > r
+r > y,a,i,d,z,f,g,o,v
+B > r
+e > t,v
+k > d,a,z,f,g,o,i
+s > i,s,d,a,z,f,g,o
+d > r,d,a,z,f,g,o,i
+i > s,l,t,x,n
+t > h
+C > r,a
+R > y

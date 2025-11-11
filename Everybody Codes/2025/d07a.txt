@@ -1,0 +1,17 @@
+Kydra,Eldenthyris,Eldendra,Kazdra,Kycion,Eldencion,Kythyris,Kazcion,Kazthyris
+
+K > y,a
+y > t,r,b
+n > t,d,c
+i > s,o
+l > b
+E > l
+z > t,d,c
+r > i,a
+c > i
+t > h
+d > e,r
+a > b
+h > y
+e > n
+o > n
