@@ -36,8 +36,8 @@ for i,j in zip(r,r[1:]):
 L=256
 for i,(a,b) in enumerate(l):
     for x,y in l[i+1:]:
-        if 0<(x-a)%L<(b-a)%L<(y-a)%L:s+=1
-        elif 0<(a-x)%L<(y-x)%L<(b-x)%L:s+=1
+        if a<x<b<y:s+=1
+        elif x<a<y<b:s+=1
         
 print(s)
 
@@ -64,8 +64,8 @@ for a in range(1,1+L):
     for b in range(a+1,1+L):
         s=0
         for x,y in l:
-            if 0<(x-a)%L<(b-a)%L<(y-a)%L:s+=1
-            elif 0<(a-x)%L<(y-x)%L<(b-x)%L:s+=1
+            if a<x<b<y:s+=1
+            elif x<a<y<b:s+=1
             elif (x,y)==(a,b):s+=1
         R=max(R,s)
 
