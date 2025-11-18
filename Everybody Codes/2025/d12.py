@@ -1,6 +1,30 @@
 DAY,_,_=__file__.rpartition('.')
 
 # ---
+## --VIZ--
+for c in 'abc':
+    r=[]
+
+    with open(f'{DAY}{c}.txt','r')as F:
+        for l in F:
+            l=l.rstrip('\n')
+            r+=[l]
+
+    W,H=len(r[0]),len(r)
+
+    from img import img
+
+    cols = {
+        '.': (255, 255, 255),
+        '#': (0, 0, 0),
+    }
+    for i in range(11):
+        cols['%X'%(i)] = (255-25*i,255-25*i,255-25*i)
+        cols[i] = (255-25*i,255-25*i,255-25*i)
+
+    img.write_img_fromlist(r,f'{DAY}{c}',cols)
+
+# ---
 
 r=[]
 
