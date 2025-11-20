@@ -23,7 +23,7 @@ def get_neigbors_list(m:list, y, x, default):
                 yield default
 
 
-def step_dict(d:dict, step_function, default, expandable=True):
+def step_dict(d:dict, step_function, default, expandable=True, get_neigbors_function=get_neigbors_dict):
     D = {}
     b,a = zip(*d.keys())
     x, X, y, Y = min(a), max(a)+1, min(b), max(b)+1
@@ -34,11 +34,11 @@ def step_dict(d:dict, step_function, default, expandable=True):
     
     for i in range(y-1, Y+1):
         for j in range(x-1, X+1):
-            D[(i, j)] = step_function(d.get(i,{}).get(j,default), get_neigbors_dict(d, i, j, default))
+            D[(i, j)] = step_function(d.get(i,{}).get(j,default), get_neigbors_function(d, i, j, default))
     return D
 
 
-def step_list(m:list, step_function, default, expandable=True):
+def step_list(m:list, step_function, default, expandable=True, get_neigbors_function=get_neigbors_list):
     M = []
     x, X, y, Y = 0, len(m[0]), 0, len(m)
     if (not expandable) or all(m[i][x]==default for i in range(y, Y)):x+=1
@@ -49,7 +49,7 @@ def step_list(m:list, step_function, default, expandable=True):
     for i in range(y-1, Y+1):
         L = []
         for j in range(x-1, X+1):
-            L += step_function(m[i][j], get_neigbors_list(m, i, j, default)),
+            L += step_function(m[i][j], get_neigbors_function(m, i, j, default)),
         M += L,
     return M
 
