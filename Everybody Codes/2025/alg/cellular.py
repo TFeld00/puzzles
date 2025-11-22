@@ -57,7 +57,7 @@ def step_list(m:list, step_function, default, expandable=True, get_neigbors_func
 def to_lists(d:dict, map_function=lambda v: v, default=0):
     x, y = zip(*d.keys())
     m = [[
-        map_function(d.get((i, j), default))
+        map_function(d.get((j, i), default))
         for j in range(min(x), max(x)+1)]
         for i in range(min(y), max(y)+1)]
     return m
