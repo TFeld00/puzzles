@@ -67,7 +67,7 @@ while l<r:
     s=0
     for v in L:
         s+=m//v
-    if s<t:
+    if s<=t:
         l=m
     else:
         r=m-1
