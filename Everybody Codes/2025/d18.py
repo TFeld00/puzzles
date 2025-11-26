@@ -71,14 +71,18 @@ for v in E.values():
             ALL[x]=[]
         ALL[x]+=y,
 
+max_test={i:{0,1}for i in F}
 for v,w in ALL.items():
-    if v in F:
-        if sum(w)<=0:
-            F[v]=0
-        else:
-            F[v]=1
+    if v in max_test:
+        max_test[v]={int(y>0)for y in w}
 
-MAX=f(last)
+import itertools
+MAX=0
+V=[max_test[i]for i in sorted(max_test)]
+for p in itertools.product(*V):
+    for i,v in enumerate(p,1):
+        F[i]=v
+    MAX=max(MAX,f(last))
 
 S=0
 for t in TEST:
