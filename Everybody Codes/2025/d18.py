@@ -1,6 +1,7 @@
 DAY,_,_=__file__.rpartition('.')
 
 from alg.util import parse_no_headers
+from itertools import product
 import re
 
 def parse(part):
@@ -64,22 +65,17 @@ print(S)
 # --
 
 F,P,E,last,TEST=parse('c')
-ALL={}
+max_test={}
 for v in E.values():
     for x,y in v:
-        if x not in ALL:
-            ALL[x]=[]
-        ALL[x]+=y,
+        if x in F:
+            if x not in max_test:
+                max_test[x]=set()
+            max_test[x]|={int(y>0)}
 
-max_test={i:{0,1}for i in F}
-for v,w in ALL.items():
-    if v in max_test:
-        max_test[v]={int(y>0)for y in w}
-
-import itertools
 MAX=0
-V=[max_test[i]for i in sorted(max_test)]
-for p in itertools.product(*V):
+V=[max_test.get(i,{0,1})for i in sorted(F)]
+for p in product(*V):
     for i,v in enumerate(p,1):
         F[i]=v
     MAX=max(MAX,f(last))
