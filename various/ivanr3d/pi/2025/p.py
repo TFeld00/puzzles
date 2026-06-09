@@ -1,6 +1,5 @@
 DAY,_,_=__file__.rpartition('.')
 
-from fractions import *
 from decimal import *
 PI='31415926535897932384626433832795'
 
