@@ -6,7 +6,7 @@ with open(f'{DAY}.txt', 'r') as F:
         l=l.strip()
         s+=l
 
-
+# p1
 w=[0]*100
 i=0
 for c in s:
@@ -18,7 +18,7 @@ for c in s:
 i=w.index(max(w))+1
 print(i*max(w))
 
-
+#p2
 w=[0]*100
 i=j=0
 r=0
@@ -33,3 +33,18 @@ for c,C in zip(s,s[::-1]):
     else:    w[i]+=1
 
 print(r)
+
+#p3
+w=[0]*100
+i=0
+
+for c,C in zip(s,s[::-1]):
+    if c=='>':i+=1
+    else:i-=1
+    if C=='<':i+=1
+    else:i-=1
+    i%=100
+    w[i]+=1
+
+i=w.index(max(w))+1
+print(i*max(w))
