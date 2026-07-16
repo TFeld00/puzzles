@@ -22,67 +22,25 @@ for i in range(0,len(r),3):
         q=int(q)if q.isdigit() else -1
         tr[int(y)] = [x,z,q]
     trees+=tr,
-
-def calc_E(st):
-    s=0
-    for l in st.values():
-        l=[min(10,v)for v in sorted(l)][-3:]
-        m=[1,2,3][-len(l):]
-        s+=sum(a*b for a,b in zip(l,m))
-    return s
+# ---
 
 def size(sp,st):
     return len(sp) + sum(map(len,st.values()))
 
-def run(tr):
-    sp={(0,1):0}
-    st={}
-    for Y in range(1,101):
-        # print('y',Y)
-#        print(st,sp)
-        #grow
-        next={}
-        for (x,y),i in sp.items():
-            a,b,c=tr[i]
-            n=(x-1,y,a),(x+1,y,b),(x,y+1,c)
-            for dx,dy,v in n:
-                if v>=0:
-                    if dy not in st.get(dx,set()):
-                        next[(dx,dy)] = max(next.get((dx,dy),-1),v)
-            st[x]=st.get(x,set())|{y}
-        sp=next
-        #energy
-        if Y>=5:
-            E=calc_E(st)
-            e_needed = 3 * size(sp,st)
-#            print(E,e_needed)
-            if E<e_needed:break
-
-    return size(sp,st)
 
 
-SUM=0
-for tr in trees:
-#    print(tr)
-#    print()
-    SUM+=run(tr)
-
-print(SUM)
-
-
-# ---
 def other_t(trs,i):
     all_t=set()
-    for I,(tr,sp,st) in trs.items():
-        if I==i:pass
+    for I,(tr,sp,st) in enumerate(trs):
+        if I==i:continue
         all_t |= {*sp.keys()}
         all_t |= {(x,y)for x in st for y in st[x]}
     return all_t
 
 def other_st(trs,i):
     all_t={}
-    for I,(tr,sp,st) in trs.items():
-        if I==i:break
+    for I,(tr,sp,st) in enumerate(trs):
+        #if I==i:continue
         for x in st:
             all_t[x]=all_t.get(x,set())|st[x]
     return all_t
@@ -91,8 +49,8 @@ def calc_E2(st,trs,i):
     s=0
     L=other_st(trs,i)
     for x,l in st.items():
-        a={*l, *L.get(x,set())}
-        l=[[v in l,min(10,v)]for v in sorted(a)][-3:]
+        a=L[x]
+        l=[[v in l,min(10,v)]for v in sorted(a)[-3:]]
         m=[1,2,3][-len(l):]
         s+=sum(a*b*c for (a,b),c in zip(l,m))
     return s
@@ -116,60 +74,61 @@ def print_trees(trs):
         for l in m[::-1]:
             F.write(''.join(l)+'\n')
 
-def run2(trees):
-    trs = {}
+def run(trees, gens = 1):
+    trs = []
     for i,tr in enumerate(trees):
         sp={(i*10,1):0}
         st={}
-        trs[i]=[tr,sp,st]
+        trs+=[tr,sp,st],
         
-    all_st={}
-    dead=set()
-    total = 0
-    for Y in range(1,101):
-#        print('y',Y,dead)
-#        if len(dead)==len(trs):break
-        for I,(tr,sp,st) in sorted(trs.items()):
-            if I in dead:
-                continue
-#            print(I, tr, st,sp)
-#            print(other_t(trs,I))
+    for _ in range(gens):
+        dead=set()
+        total = 0
+
+        next={}
+        for I,(tr,sp,st) in enumerate(trs):
+            for (x,y) in sp:
+                if x in next and next[x][0]>y:
+                    pass
+                else:
+                    next[x]=[y,tr,{(x,1):0},{}]
+        trs=[[tr,sp,st] for _,(_,tr,sp,st) in sorted(next.items())]
+
+        for Y in range(1,101):
+            if len(dead)==len(trs):break
             #grow
-            next={}
-            for (x,y),i in sp.items():
-                a,b,c=tr[i]
-                n=(x-1,y,a),(x+1,y,b),(x,y+1,c)
-                for dx,dy,v in n:
-                    if v>=0:
-                        if (dx,dy) not in other_t(trs,I) and dy not in st.get(dx,set()):
-                            next[(dx,dy)] = max(next.get((dx,dy),-1),v)
-                st[x]=st.get(x,set())|{y}
-                all_st[x]=all_st.get(x,set())|{y}
-            trs[I][1]=next
+            for I,(tr,sp,st) in enumerate(trs):
+                if I in dead:
+                    continue
+                next={}
+                others = other_t(trs,I)
+                for (x,y),i in sp.items():
+                    a,b,c=tr[i]
+                    n=(x-1,y,a),(x+1,y,b),(x,y+1,c)
+                    for dx,dy,v in n:
+                        if v>=0:
+                            if (dx,dy) not in others and dy not in st.get(dx,set()):
+                                next[(dx,dy)] = max(next.get((dx,dy),-1),v)
+                    st[x]=st.get(x,set())|{y}
+                trs[I][1]=next
             #energy
-            if Y>=5:
-                E=calc_E2(st,trs,I)
-                #E=calc_E(st)
-                e_needed = 3 * size(sp,st)
-#                print('  ',I,E,e_needed)
-                if E<e_needed:
-                    dead|={I}
-    for I,(tr,sp,st) in trs.items():
+            for I,(tr,sp,st) in enumerate(trs):
+                if I in dead:
+                    continue
+                if Y>=5:
+                    E=calc_E2(st,trs,I)
+                    e_needed = 3 * size(sp,st)
+                    if E<e_needed:
+                        dead|={I}
+    for I,(tr,sp,st) in enumerate(trs):
         total += size(sp,st)
-    
-    print(total)
-    print_trees(trs)
+        
     return total
 
+# ---
 
-print(run2(trees))
+print(sum(run([t]) for t in trees))
 
-#wrong
-7110
-7160
-7335
-7415
-7468
-7473
-11008
-14229
+print(run(trees))
+
+print(run(trees,3))
