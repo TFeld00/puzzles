@@ -17,57 +17,6 @@ for v in r:
     else:
         nums+=v
 
-def lines(card):
-    rows=[*card]
-    cols=[*zip(*card)]
-    diags=[[card[i][i]for i in range(5)],[card[i][4-i]for i in range(5)]]
-    lines = rows+cols+diags
-    return map(set,lines)
-
-called=set()
-all_lines = []
-for c in cards:all_lines+=lines(c)
-for n in nums:
-    called.add(n)
-    if sum(l <= called for l in all_lines)>4:print(n);break
-
-# ---
-
-cubes = []
-for i in range(0,len(cards),5):
-    cubes+=cards[i:i+5],
-
-def cube_lines(cube):
-    res=set()
-    for c in cube:
-        res |= {*map(tuple,lines(c))}
-    for c in zip(*cube):
-        res |= {*map(tuple,lines(c))}
-    for j in range(5):
-        c=[]
-        for k in range(5):
-            c+=[cube[i][j][k]for i in range(5)],
-        res |= {*map(tuple,lines(c))}
-    res.add(tuple(cube[i][i][i]for i in range(5)))
-    res.add(tuple(cube[i][4-i][i]for i in range(5)))
-    res.add(tuple(cube[i][i][4-i]for i in range(5)))
-    res.add(tuple(cube[i][4-i][4-i]for i in range(5)))
-    res.add(tuple(cube[4-i][i][i]for i in range(5)))
-    res.add(tuple(cube[4-i][4-i][i]for i in range(5)))
-    res.add(tuple(cube[4-i][i][4-i]for i in range(5)))
-    res.add(tuple(cube[4-i][4-i][4-i]for i in range(5)))
-    
-    return map(set,res)
-
-all_lines2 = []
-for c in cubes:
-    all_lines2 += cube_lines(c)
-
-called=set()
-for n in nums:
-    called.add(n)
-    if sum(l <= called for l in all_lines2)>4:print(n);break
-
 import itertools
 def generate_hypercube_bingo_lines(size=5, dimensions=4):
     """
@@ -111,12 +60,29 @@ def generate_hypercube_bingo_lines(size=5, dimensions=4):
             
     return lines
 
-# Execute and profile the generation
-bingo_lines = generate_hypercube_bingo_lines()
-print()
-all_lines3 = [set([cubes[i][j][k][l]for (i,j,k,l) in v])for v in bingo_lines]
 
-called=set()
-for n in nums:
-    called.add(n)
-    if sum(l <= called for l in all_lines3)>4:print(n);break
+cubes = []
+for i in range(0,len(cards),5):
+    cubes+=cards[i:i+5],
+
+def all_lines(part):
+    if part == 1:
+        bingo_lines = generate_hypercube_bingo_lines(5,2)
+        return [set([cubes[i][j][k][l]for (k,l) in v])for i in range(5) for j in range(5) for v in bingo_lines]
+    elif part == 2:
+        bingo_lines = generate_hypercube_bingo_lines(5,3)
+        return [set([cubes[i][j][k][l]for (j,k,l) in v])for i in range(5) for v in bingo_lines]
+    else:
+        bingo_lines = generate_hypercube_bingo_lines(5,4)
+        return [set([cubes[i][j][k][l]for (i,j,k,l) in v])for v in bingo_lines]
+
+def run(part):
+    called=set()
+    lines = all_lines(part)
+    for n in nums:
+        called.add(n)
+        if sum(l <= called for l in lines)>4:print(n);break
+
+run(1)
+run(2)
+run(3)
