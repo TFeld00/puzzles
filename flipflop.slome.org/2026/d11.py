@@ -3,7 +3,6 @@ DAY,_,_=__file__.rpartition('.')
 r=[]
 
 with open(f'{DAY}.txt', 'r') as F:
-    i=-1
     for l in F:
         r+=l,
 
