@@ -100,10 +100,9 @@ print(s)
 
 
 def topological_sort_dfs(vertices, edges):
-    # 1. Build adjacency list
-    adj_list = {i: [] for i in vertices}
+    adj = {i: [] for i in vertices}
     for u, v in edges:
-        adj_list[u].append(v)
+        adj[u] += v
         
     state = {i: 0 for i in vertices}
     stack = []
@@ -111,13 +110,12 @@ def topological_sort_dfs(vertices, edges):
     def dfs(node):
         state[node] = 1 # Mark as Visiting
         
-        for neighbor in adj_list[node]:
+        for neighbor in adj[node]:
             if state[neighbor] == 0:
                 dfs(neighbor)
                     
         state[node] = 2 # Mark as Visited
-        stack.append(node) # Post-order addition
-        return True
+        stack.append(node)
 
     # 3. Run DFS for every unvisited node
     for i in vertices:
