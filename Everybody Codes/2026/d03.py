@@ -65,7 +65,7 @@ def iso(a,b):
 s=0
 for a,b in r:
     q=iso(a,b)
-    for b2 in range(1,int(b)):
+    for b2 in range(q,int(b)):
         q2=iso(a,b2)
         if q2==q:
             q=0
