@@ -28,13 +28,12 @@ def fill(data, start_coords, fill_value, fillable = None):
     orig_value = data[y][x]
     
     q=Queue()
-    s=set()
+    s={(x,y)}
     q.put((x,y,orig_value))
 
     if fill_value == orig_value:
         raise ValueError(f"Area already {fill_value}")
 
-    s=set()
     count = 0
     while not q.empty():
         x,y,c=q.get()
