@@ -1,0 +1,499 @@
+hands 8:10:22
+direction CCW:CCW:CW
+current 5:5:3
+move 3255:7336:3866
+
+hands 5:12:23
+direction CCW:CW:CCW
+current 0:1:10
+move 3488:3678:3267
+
+hands 8:7:25
+direction CW:CW:CCW
+current 4:4:3
+move 2547:3276:3714
+
+hands 7:9:24
+direction CW:CCW:CW
+current 3:0:19
+move 3947:2543:2785
+
+hands 7:13:20
+direction CCW:CCW:CCW
+current 5:6:1
+move 2050:2347:3645
+
+hands 7:7:26
+direction CW:CCW:CW
+current 6:2:15
+move 2405:2138:3280
+
+hands 9:8:23
+direction CW:CW:CCW
+current 1:6:3
+move 3938:2969:3229
+
+hands 7:11:22
+direction CW:CW:CCW
+current 6:6:9
+move 2184:2747:2865
+
+hands 4:10:26
+direction CW:CCW:CCW
+current 3:1:10
+move 2443:2442:3634
+
+hands 4:10:26
+direction CW:CW:CCW
+current 2:7:12
+move 2051:3795:2134
+
+hands 5:7:28
+direction CCW:CCW:CW
+current 1:5:6
+move 3783:5260:2480
+
+hands 9:4:27
+direction CCW:CCW:CW
+current 2:3:13
+move 2317:2384:2924
+
+hands 8:5:27
+direction CW:CCW:CW
+current 3:4:22
+move 2598:3173:3180
+
+hands 8:14:18
+direction CCW:CW:CW
+current 6:0:5
+move 3172:3898:2388
+
+hands 5:4:31
+direction CCW:CW:CW
+current 4:3:21
+move 3778:2751:2642
+
+hands 5:12:23
+direction CCW:CCW:CW
+current 2:2:19
+move 2692:3461:3494
+
+hands 7:10:23
+direction CW:CW:CCW
+current 4:1:19
+move 2962:3068:3432
+
+hands 9:7:24
+direction CW:CW:CCW
+current 6:6:10
+move 3830:3641:2608
+
+hands 8:14:18
+direction CW:CCW:CCW
+current 0:7:0
+move 2519:3397:2247
+
+hands 9:5:26
+direction CCW:CCW:CW
+current 5:1:18
+move 2879:3530:2242
+
+hands 9:10:21
+direction CW:CCW:CW
+current 5:4:13
+move 2935:6405:3652
+
+hands 4:9:27
+direction CW:CCW:CW
+current 1:1:13
+move 2294:2124:3465
+
+hands 8:5:27
+direction CCW:CW:CW
+current 4:2:24
+move 2837:2787:3689
+
+hands 7:9:24
+direction CCW:CCW:CCW
+current 0:1:14
+move 3124:3754:3980
+
+hands 7:8:25
+direction CCW:CCW:CW
+current 5:1:17
+move 2326:3033:2763
+
+hands 7:12:21
+direction CCW:CW:CCW
+current 5:5:15
+move 2033:2920:2646
+
+hands 9:7:24
+direction CW:CCW:CW
+current 4:1:17
+move 3828:3289:2299
+
+hands 6:7:27
+direction CW:CW:CCW
+current 0:2:9
+move 3903:2654:2914
+
+hands 5:13:22
+direction CCW:CCW:CW
+current 0:1:15
+move 2642:3872:2315
+
+hands 6:12:22
+direction CW:CW:CCW
+current 4:0:19
+move 3266:3179:3637
+
+hands 8:7:25
+direction CW:CCW:CW
+current 7:0:20
+move 2874:6359:2962
+
+hands 8:11:21
+direction CW:CCW:CW
+current 6:10:14
+move 2025:2089:2548
+
+hands 5:8:27
+direction CW:CW:CCW
+current 4:4:11
+move 3159:2838:2697
+
+hands 8:12:20
+direction CW:CW:CCW
+current 5:0:6
+move 2555:2191:2763
+
+hands 4:6:30
+direction CCW:CW:CW
+current 2:5:10
+move 3081:3038:2817
+
+hands 8:7:25
+direction CW:CCW:CW
+current 7:5:5
+move 2740:2251:3723
+
+hands 4:14:22
+direction CW:CCW:CW
+current 0:8:12
+move 2566:3200:2798
+
+hands 8:7:25
+direction CCW:CCW:CCW
+current 3:0:0
+move 3301:2875:3520
+
+hands 4:10:26
+direction CW:CCW:CW
+current 1:8:12
+move 3233:2828:3813
+
+hands 5:7:28
+direction CCW:CCW:CCW
+current 1:2:4
+move 3600:2053:2084
+
+hands 9:12:19
+direction CCW:CW:CCW
+current 4:4:14
+move 3752:5084:2676
+
+hands 7:13:20
+direction CCW:CCW:CW
+current 5:11:4
+move 2815:3254:3141
+
+hands 6:11:23
+direction CCW:CCW:CW
+current 3:2:7
+move 2386:3996:2832
+
+hands 4:8:28
+direction CW:CCW:CCW
+current 2:1:5
+move 2329:2168:3113
+
+hands 8:6:26
+direction CCW:CW:CCW
+current 5:5:15
+move 3584:2833:2249
+
+hands 8:11:21
+direction CW:CCW:CCW
+current 3:1:13
+move 3063:2286:3977
+
+hands 5:11:24
+direction CCW:CW:CW
+current 2:2:19
+move 2037:2368:2926
+
+hands 7:6:27
+direction CCW:CCW:CCW
+current 0:0:8
+move 3664:3083:3699
+
+hands 9:9:22
+direction CCW:CCW:CW
+current 1:2:6
+move 2797:2491:3230
+
+hands 7:13:20
+direction CW:CCW:CW
+current 0:11:17
+move 3376:2545:2633
+
+hands 9:10:21
+direction CW:CCW:CW
+current 7:0:15
+move 3656:4222:3218
+
+hands 4:10:26
+direction CCW:CCW:CCW
+current 2:1:10
+move 3918:3533:2979
+
+hands 6:6:28
+direction CW:CCW:CCW
+current 3:5:6
+move 2994:3520:3376
+
+hands 7:10:23
+direction CW:CW:CCW
+current 2:6:3
+move 2876:3520:2507
+
+hands 8:14:18
+direction CCW:CCW:CW
+current 1:10:17
+move 2425:3724:2138
+
+hands 4:14:22
+direction CW:CCW:CW
+current 3:9:16
+move 2565:3349:3565
+
+hands 7:14:19
+direction CW:CW:CCW
+current 4:4:10
+move 2813:2807:3181
+
+hands 5:6:29
+direction CW:CW:CCW
+current 4:2:2
+move 2837:3877:2762
+
+hands 6:6:28
+direction CW:CCW:CCW
+current 2:2:2
+move 3446:2520:3659
+
+hands 6:12:22
+direction CCW:CCW:CCW
+current 2:7:21
+move 2211:2946:2916
+
+hands 8:9:23
+direction CW:CW:CCW
+current 6:6:2
+move 3828:4538:3983
+
+hands 5:13:22
+direction CCW:CW:CCW
+current 2:11:5
+move 3478:2090:3921
+
+hands 4:6:30
+direction CCW:CCW:CCW
+current 1:0:27
+move 2794:2646:3023
+
+hands 5:14:21
+direction CCW:CW:CW
+current 1:0:17
+move 3055:3455:2940
+
+hands 8:6:26
+direction CW:CW:CW
+current 5:5:10
+move 2316:2860:3391
+
+hands 8:7:25
+direction CCW:CW:CCW
+current 0:2:17
+move 2085:3127:3570
+
+hands 5:10:25
+direction CCW:CCW:CCW
+current 1:7:19
+move 2070:2604:3587
+
+hands 9:8:23
+direction CCW:CW:CCW
+current 7:2:10
+move 3940:3677:3855
+
+hands 6:10:24
+direction CW:CCW:CCW
+current 1:8:15
+move 2111:3390:3331
+
+hands 6:14:20
+direction CCW:CW:CCW
+current 0:10:4
+move 2796:2842:3280
+
+hands 7:14:19
+direction CW:CCW:CW
+current 2:9:12
+move 2526:5943:3641
+
+hands 5:8:27
+direction CCW:CW:CW
+current 2:5:23
+move 3946:2441:2754
+
+hands 4:14:22
+direction CW:CCW:CCW
+current 0:5:10
+move 3184:3455:2156
+
+hands 7:9:24
+direction CCW:CCW:CW
+current 2:3:22
+move 2713:2697:3109
+
+hands 4:12:24
+direction CW:CCW:CW
+current 1:9:16
+move 2361:2516:3644
+
+hands 5:5:30
+direction CCW:CW:CCW
+current 4:3:17
+move 2818:3834:3723
+
+hands 5:12:23
+direction CW:CW:CW
+current 4:9:1
+move 2192:3404:3431
+
+hands 4:13:23
+direction CCW:CW:CCW
+current 3:10:7
+move 2813:3584:2233
+
+hands 8:4:28
+direction CW:CW:CCW
+current 4:3:20
+move 2742:2134:3846
+
+hands 4:6:30
+direction CCW:CCW:CCW
+current 3:3:18
+move 3005:3361:3250
+
+hands 4:11:25
+direction CW:CW:CW
+current 0:5:16
+move 3127:7014:2345
+
+hands 8:5:27
+direction CW:CW:CCW
+current 3:1:4
+move 3353:3086:3685
+
+hands 6:5:29
+direction CW:CW:CCW
+current 1:0:13
+move 2109:3869:3523
+
+hands 6:12:22
+direction CW:CW:CCW
+current 2:8:9
+move 2476:2985:2716
+
+hands 8:14:18
+direction CW:CCW:CCW
+current 7:6:14
+move 3374:2175:3982
+
+hands 6:13:21
+direction CCW:CW:CW
+current 2:11:6
+move 2306:3660:2001
+
+hands 7:14:19
+direction CW:CW:CW
+current 4:2:15
+move 2263:2132:3310
+
+hands 5:11:24
+direction CCW:CCW:CCW
+current 1:8:20
+move 2107:3094:2094
+
+hands 6:7:27
+direction CCW:CCW:CW
+current 3:3:15
+move 2099:3517:3743
+
+hands 4:4:32
+direction CCW:CW:CW
+current 0:3:30
+move 3161:2720:2632
+
+hands 6:6:6
+direction CW:CW:CW
+current 1:1:1
+move 40:40:40
+
+hands 10:10:10
+direction CW:CW:CW
+current 9:0:5
+move 1:0:0
+
+hands 3:3:3
+direction CW:CCW:CW
+current 2:0:1
+move 1:1:1
+
+hands 5:7:4
+direction CW:CW:CW
+current 4:6:3
+move 1:1:1
+
+hands 6:8:12
+direction CW:CCW:CW
+current 2:4:8
+move 9:7:4
+
+hands 6:8:12
+direction CW:CCW:CW
+current 1:2:2
+move 10:12:15
+
+hands 6:8:12
+direction CW:CCW:CW
+current 1:2:2
+move 10:12:20
+
+hands 4:5:7
+direction CCW:CCW:CCW
+current 0:0:0
+move 3:5:7
+
+hands 5:7:9
+direction CW:CCW:CW
+current 0:0:0
+move 2:8:11
+
+hands 8:8:8
+direction CW:CCW:CW
+current 0:2:4
+move 16:16:16
